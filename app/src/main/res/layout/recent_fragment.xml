@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/light_cream"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="231dp"
+            android:background="@color/green">
+
+        </RelativeLayout>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView_trip"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/team_image"/>
+
+        <TextView
+            android:id="@+id/textView_titlet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@id/imageView_trip"
+            android:fontFamily="@font/boogaloo"
+            android:inputType="textPersonName"
+            android:textAlignment="textStart"
+            android:textColor="@color/light_cream"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/boogaloo"
+            android:text="Join Code : "
+            android:layout_marginStart="15dp"
+            android:textColor="@color/dark_brown"
+            android:textSize="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/textView_titlet"
+            android:layout_toRightOf="@id/imageView_trip"/>
+
+        <TextView
+            android:id="@+id/textView_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_titlet"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/textView20"
+            android:fontFamily="@font/boogaloo"
+            android:textColor="@color/light_cream"
+            android:textSize="25dp" />
+
+        <TextView
+            android:layout_below="@id/imageView_trip"
+            android:id="@+id/due_label"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_brown"
+            android:fontFamily="@font/boogaloo"
+            android:textSize="15dp"
+            android:text="Due : " />
+
+        <TextView
+            android:layout_below="@id/imageView_trip"
+            android:id="@+id/to_label"
+            android:layout_toRightOf="@id/start_date"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_brown"
+            android:fontFamily="@font/boogaloo"
+            android:textSize="15dp"
+            android:text="to " />
+
+        <TextView
+            android:id="@+id/start_date"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView_trip"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_toRightOf="@id/due_label"
+            android:fontFamily="@font/boogaloo"
+            android:textColor="@color/light_cream"
+            android:textSize="20dp"
+            android:text="MMM DD, YYYY"
+
+            />
+
+
+        <TextView
+            android:id="@+id/end_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView_trip"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_toRightOf="@id/to_label"
+            android:fontFamily="@font/boogaloo"
+            android:textColor="@color/light_cream"
+            android:textSize="20dp"
+            android:text="MMM DD, YYYY"
+            android:clickable="false"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/member_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/fui_transparent"
+            app:cardBackgroundColor="@color/cream"
+            app:cardCornerRadius="5dp"
+            android:layout_below="@id/cancel_request_btn"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/boogaloo"
+                android:text=" Members "
+                android:layout_gravity="center"
+                android:textColor="@color/red_indian"
+                android:textSize="15dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/editT_btn"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/fui_transparent"
+            app:srcCompat="@drawable/pen"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <ImageButton
+            android:id="@+id/cancel_request_btn"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/fui_transparent"
+            app:srcCompat="@drawable/bin"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/editT_btn"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/remaining_layout"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/fui_transparent"
+            app:cardBackgroundColor="@color/yellow"
+            android:layout_below="@id/start_date"
+            android:layout_marginStart="15dp"
+            app:cardCornerRadius="30dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/wallet"/>
+
+                <TextView
+                    android:id="@+id/text_remain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remaing Cost : "
+                    android:textColor="@color/red_indian"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/boogaloo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/imageView3"/>
+
+                <TextView
+                    android:id="@+id/remaining_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/boogaloo"
+                    android:text="00.00"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/text_remain"
+                    android:textColor="@color/red_indian"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/textView_currency1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/boogaloo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/remaining_cost"
+                    android:text="THB"
+                    android:textColor="@color/red_indian"
+                    android:textSize="20dp" />
+
+
+                <ImageButton
+                    android:id="@+id/add_wallet_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/fui_transparent"
+                    android:src="@drawable/add_in"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/textView_currency1"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cost_layout"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/fui_transparent"
+        app:cardBackgroundColor="@color/red_indian"
+        android:layout_below="@id/start_date"
+        android:layout_alignParentRight="true"
+        app:cardCornerRadius="30dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/add_cost_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/fui_transparent"
+                android:src="@drawable/add_in"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/textView_currency2"
+                android:layout_marginTop="15dp"/>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/money"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/text_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Cost : "
+                android:textColor="@color/yellow"
+                android:fontFamily="@font/boogaloo"
+                android:textSize="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/imageView4"/>
+
+            <TextView
+                android:id="@+id/cost_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/boogaloo"
+                android:text="00.00"
+                android:textColor="@color/yellow"
+                android:textSize="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/text_cost"/>
+
+            <TextView
+                android:id="@+id/textView_currency2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/boogaloo"
+                android:text="THB"
+                android:textColor="@color/yellow"
+                android:textSize="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/cost_total"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cost_history_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/fui_transparent"
+            app:cardBackgroundColor="@color/cream"
+            app:cardCornerRadius="5dp"
+            android:layout_below="@id/cost_layout"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/boogaloo"
+                android:text=" Cost History "
+                android:layout_gravity="center"
+                android:textColor="@color/red_indian"
+                android:textSize="15dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/fui_transparent"
+            app:cardBackgroundColor="@color/retro_green"
+            app:cardCornerRadius="5dp"
+            android:layout_below="@id/cost_history_btn"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp">
+
+            <ImageButton
+                android:id="@+id/csv_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/csv_icon"
+                android:background="@color/fui_transparent" />
+        </androidx.cardview.widget.CardView>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="800dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/remaining_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pie_chart"
+                    android:layout_width="400dp"
+                    android:layout_height="371dp"
+                    android:layout_gravity="center"
+                    android:padding="50dp"></com.github.mikephil.charting.charts.PieChart>
+
+                <androidx.slidingpanelayout.widget.SlidingPaneLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context=".LogIn">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sign_in_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:text="@string/get_started_with_google"
+            tools:layout_editor_absoluteX="133dp"
+            android:textSize="30dp"
+            android:fontFamily="@font/boogaloo"
+            android:textColor="@color/yellow"
+            tools:layout_editor_absoluteY="300dp" />
+
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_btn"
+            app:colorScheme="light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            tools:layout_editor_absoluteX="160dp"
+            tools:layout_editor_absoluteY="384dp" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

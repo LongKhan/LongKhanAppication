@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/fui_transparent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/create_trip_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/boogaloo"
+            android:text="Create Trip"
+            android:textColor="@color/grey"
+            android:textSize="30dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_below="@id/create_trip_label"
+            android:id="@+id/image_trip"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/team_image">
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <ImageView
+            android:id="@+id/add_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/image_trip"
+            android:layout_below="@id/image_trip"
+            app:srcCompat="@drawable/add"
+            android:contentDescription="@string/todo" />
+
+        <EditText
+            android:id="@+id/trip_title"
+            android:layout_below="@id/create_trip_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/image_trip"
+            android:hint="@string/trip_title"
+            android:textAlignment="textStart"
+            android:inputType="textEmailSubject"
+            android:ems="15"
+            android:textColor="@color/dark_brown"
+            android:autofillHints=""
+            android:maxLength="15" />
+
+        <EditText
+            android:id="@+id/user_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image_trip"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:autofillHints=""
+            android:layout_below="@id/amount_label"
+            android:hint="00.00"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="@color/dark_brown"
+            android:inputType="numberDecimal"
+            android:maxLength="12" />
+
+        <TextView
+            android:id="@+id/amount_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_amount"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/boogaloo"
+            android:textSize="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/image_trip"
+            android:layout_below="@id/trip_title"/>
+
+        <Spinner
+            android:id="@+id/add_trip_currency_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/start_date_label"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@color/cream"
+            android:popupBackground="@color/cream"/>
+
+
+        <TextView
+            android:layout_below="@id/add_image"
+            android:id="@+id/start_date_label"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/boogaloo"
+            android:textSize="20dp"
+            android:text="@string/start_date" />
+
+        <DatePicker
+            android:id="@+id/start_date"
+            android:layout_marginTop="5dp"
+            android:layout_width="289dp"
+            android:layout_height="102dp"
+            android:layout_below="@id/start_date_label"
+            android:layout_centerHorizontal="true"
+            android:calendarViewShown="false"
+            android:background="@color/red_indian"
+            android:datePickerMode="spinner" />
+
+        <TextView
+            android:layout_below="@id/start_date"
+            android:layout_marginTop="15dp"
+            android:id="@+id/edit_end_date_label"
+            android:textColor="@color/grey"
+            android:layout_marginStart="50dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/boogaloo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/end_date"
+            android:visibility="visible"/>
+
+        <DatePicker
+            android:id="@+id/cost_list_add"
+            android:layout_width="293dp"
+            android:layout_height="97dp"
+            android:layout_below="@id/edit_end_date_label"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@color/red_indian"
+            android:calendarTextColor="@color/yellow"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:visibility="visible"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cost_list_add">
+
+            <TextView
+                android:id="@+id/tip_code_label"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/boogaloo"
+                android:layout_width="wrap_content"
+                android:layout_toLeftOf="@id/trip_code"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="@string/code" />
+
+            <TextView
+                android:id="@+id/trip_code"
+                android:layout_marginTop="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="25sp"
+                android:fontFamily="@font/boogaloo"
+                android:text="HHHHHH"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/random_btn"
+                android:textColor="@color/yellow"
+                android:background="@color/red_indian"/>
+
+            <Button
+                android:layout_marginTop="25dp"
+                android:id="@+id/random_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/cream"
+                android:textColor="@color/green"
+                android:fontFamily="@font/boogaloo"
+                android:textSize="20dp"
+                android:text="@string/random" />
+
+            <Button
+                android:id="@+id/ok_add_trip_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                android:textColor="@color/cream"
+                android:text="@string/ok"
+                android:fontFamily="@font/boogaloo"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/random_btn"
+                android:layout_centerVertical="true"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

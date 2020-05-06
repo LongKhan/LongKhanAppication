@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/fui_transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/green">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/trip_profile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/team_image" />
+
+        <TextView
+            android:id="@+id/trip_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="40dp"
+            android:layout_toRightOf="@id/trip_profile"
+            android:fontFamily="@font/boogaloo"
+            android:textAlignment="center"
+            android:textColor="@color/dark_brown"
+            android:textSize="30dp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

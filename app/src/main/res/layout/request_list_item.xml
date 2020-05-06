@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/yellow">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/noti_icon" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/boogaloo"
+                android:text="@string/username"
+                android:textAlignment="center"
+                android:textColor="@color/dark_brown"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/request_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/boogaloo"
+                android:text=" wants to join "
+                android:textColor="@color/dark_brown"
+                android:layout_toRightOf="@id/username"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/trip_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:fontFamily="@font/boogaloo"
+            android:text="HHHHHHHHHHHHHHHHHHHH"
+            android:textColor="@color/dark_brown"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/trip_title"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/with"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" with "
+                android:fontFamily="@font/boogaloo"
+                android:textSize="20dp"
+                android:textColor="@color/dark_brown"
+                />
+
+            <TextView
+                android:id="@+id/user_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/boogaloo"
+                android:text="amount"
+                android:layout_toRightOf="@id/with"
+                android:textAlignment="center"
+                android:textColor="@color/dark_brown"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/user_currency"
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/user_amount"
+                android:fontFamily="@font/boogaloo"
+                android:text="THB"
+                android:textColor="@color/dark_brown"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/cancel_request_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/fui_transparent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/delete" />
+
+        <ImageButton
+            android:id="@+id/confirm_request_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/fui_transparent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@drawable/tick" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/fui_transparent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/details_cost_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/boogaloo"
+            android:text="Cost Details"
+            android:textColor="@color/grey"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/details_cost_label"
+            android:id="@+id/image_deatail_bill"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            tools:src="@drawable/bill" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_deatail_bill"
+            android:layout_marginTop="25dp"
+            android:text="Cost Title"
+            android:layout_marginStart="45dp"
+            android:fontFamily="@font/boogaloo"
+            android:inputType="textPersonName"
+            android:textAlignment="textStart"
+            android:textColor="@color/grey"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/text_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_title"
+            android:layout_marginStart="45dp"
+            android:hint="00.00"
+            android:inputType="numberDecimal"
+            android:maxLength="12"
+            android:fontFamily="@font/boogaloo"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/details_cuurency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THB"
+            android:layout_marginStart="15dp"
+            android:layout_below="@+id/text_title"
+            android:layout_toRightOf="@+id/text_cost"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/boogaloo"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/details_date"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_cost"
+            android:layout_marginStart="45dp"
+            android:fontFamily="@font/boogaloo"
+            android:text="Date : "
+            android:textColor="@color/grey"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/text_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="April 27, 2020"
+            android:textSize="20dp"
+            android:fontFamily="@font/boogaloo"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/grey"
+            android:layout_below="@+id/text_cost"
+            android:layout_toRightOf="@id/details_date"/>
+
+        <TextView
+            android:id="@+id/details_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_date"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/boogaloo"
+            android:text="Category :"
+            android:textColor="@color/grey"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/text_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_date"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/details_category_label"
+            android:fontFamily="@font/boogaloo"
+            android:textSize="20dp"
+            android:textColor="@color/grey"
+            android:text="- - - - -" />
+
+        <TextView
+            android:id="@+id/text_detail_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Details : "
+            android:textColor="@color/grey"
+            android:fontFamily="@font/boogaloo"
+            android:textSize="20dp"
+            android:layout_below="@id/text_category"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/text_detail"
+            android:textColor="@color/dark_brown"
+            android:gravity="start|top"
+            android:layout_below="@id/text_detail_label"
+            android:layout_centerHorizontal="true"
+            android:background="@color/cream"
+            android:ems="15"
+            android:fontFamily="@font/boogaloo"
+            android:textSize="18dp"
+            android:inputType="textMultiLine" />/>
+
+        <TextView
+            android:id="@+id/details_equal_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/boogaloo"
+            android:text="Equal : "
+            android:layout_below="@+id/text_detail"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/grey"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/detail_equal_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/boogaloo"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_toRightOf="@id/details_equal_label"
+            android:layout_below="@id/text_detail"
+            android:textSize="20dp"
+            android:text="Yes/No"
+            android:layout_marginBottom="15dp"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

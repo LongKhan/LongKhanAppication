@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "535503136173",
+    "firebase_url": "https://long-khan.firebaseio.com",
+    "project_id": "long-khan",
+    "storage_bucket": "long-khan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:535503136173:android:0a859ed3cdab500df0ed24",
+        "android_client_info": {
+          "package_name": "com.example.longkhan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "535503136173-5hjesukdllc417m7psqbvjvf8e3888gl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.longkhan",
+            "certificate_hash": "2547bdf457d1878aa0bce167404e990e68f8f0cd"
+          }
+        },
+        {
+          "client_id": "535503136173-staqpepeaorao303jd5h7n2nt28krjeu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKRWMRPTwpWga2l1oAFPQI9HvlbJ8nCvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "535503136173-staqpepeaorao303jd5h7n2nt28krjeu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

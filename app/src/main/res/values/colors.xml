@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="Black">#020202</color>
+    <color name="blushpink">#EB8F90</color>
+    <color name="tangerine">#FFB471</color>
+    <color name="casper">#ADBED2</color>
+    <color name="purple_pastel">#C58BEF</color>
+    <color name="red">#FC4032</color>
+    <!--RedIndianTheme-->
+    <color name="cream">#CAA87B</color>
+    <color name="grey">#444444</color>
+    <color name="dark_grey">#253135</color>
+    <color name="green">#58774B</color>
+    <color name="yellow">#EDA924</color>
+    <color name="red_indian">#803A38</color>
+    <color name="light_cream">#FAE3C4</color>
+    <color name="retro_green">#847B5C</color>
+    <color name="dark_brown">#292613</color>
+</resources>
+

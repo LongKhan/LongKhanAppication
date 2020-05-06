@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/yellow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/add_wallet_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/boogaloo"
+            android:text="Add Wallet"
+            android:textColor="@color/grey"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/editText_wallet"
+            android:layout_below="@id/add_wallet_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="12"
+            android:hint="00.00"
+            android:ems="12"
+            android:textAlignment="center"
+            android:textColor="@color/dark_brown"
+            android:layout_centerHorizontal="true"
+            android:textSize="30dp"
+            android:inputType="numberDecimal" />
+        
+        <TextView
+            android:id="@+id/cf_member_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/editText_wallet"
+            android:hint="THB"
+            android:fontFamily="@font/boogaloo"
+            android:textColor="@color/grey"
+            android:textSize="30dp"
+            />
+
+        <Button
+            android:id="@+id/add_wallet_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/cf_member_currency"
+            android:layout_marginTop="10dp"
+            android:background="@color/green"
+            android:fontFamily="@font/boogaloo"
+            android:textSize="20dp"
+            android:textColor="@color/cream"
+            android:text="@string/ok" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

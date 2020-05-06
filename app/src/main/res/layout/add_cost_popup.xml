@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/fui_transparent"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow"
+            tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/add_cost_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/boogaloo"
+                    android:text="Add Cost"
+                    android:textColor="@color/grey"
+                    android:textSize="30dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_below="@id/add_cost_label"
+                    android:id="@+id/receipt_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="30dp"
+                    android:src="@drawable/bill">
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <ImageView
+                    android:id="@+id/btn_add_Image_Bill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/receipt_image"
+                    android:layout_below="@id/receipt_image"
+                    app:srcCompat="@drawable/add"
+                    android:contentDescription="@string/todo" />
+
+                <EditText
+                    android:id="@+id/cost_title_input"
+                    android:layout_below="@id/add_cost_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_toRightOf="@+id/receipt_image"
+                    android:hint="Cost Title"
+                    android:textAlignment="textStart"
+                    android:inputType="textEmailSubject"
+                    android:ems="15"
+                    android:textColor="@color/dark_brown"
+                    android:autofillHints=""
+                    android:maxLength="15" />
+
+                <EditText
+                    android:id="@+id/cost_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/receipt_image"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:autofillHints=""
+                    android:layout_below="@id/cost_title_input"
+                    android:hint="00.00"
+                    android:textAlignment="center"
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_brown"
+                    android:inputType="numberDecimal"
+                    android:maxLength="12" />
+
+                <Spinner
+                    android:id="@+id/add_cost_currency_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/date_cost_label"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/cream"
+                    android:popupBackground="@color/cream"/>
+
+                <TextView
+                    android:layout_below="@id/btn_add_Image_Bill"
+                    android:id="@+id/date_cost_label"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/boogaloo"
+                    android:textSize="20dp"
+                    android:text="Date" />
+
+                <DatePicker
+                    android:id="@+id/date_cost"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="289dp"
+                    android:layout_height="102dp"
+                    android:layout_below="@id/date_cost_label"
+                    android:layout_centerHorizontal="true"
+                    android:calendarViewShown="false"
+                    android:background="@color/red_indian"
+                    android:datePickerMode="spinner" />
+
+                <EditText
+                    android:id="@+id/cost_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:background="@color/cream"
+                    android:ems="15"
+                    android:gravity="start|top"
+                    android:hint="Details : "
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/dark_brown"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/date_cost"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:id="@+id/category_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/boogaloo"
+                    android:text="Category :"
+                    android:textColor="@color/grey"
+                    android:textSize="20dp"
+                    android:layout_below="@id/cost_details" />
+
+                <Spinner
+                    android:id="@+id/category_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/cream"
+                    android:popupBackground="@color/cream"
+                    android:layout_below="@id/cost_details"
+                    android:layout_toRightOf="@id/category_label"/>
+
+                <TextView
+                    android:id="@+id/equal_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/boogaloo"
+                    android:text="Equal : "
+                    android:textColor="@color/grey"
+                    android:textSize="20dp"
+                    android:layout_below="@id/category_label" />
+
+                <Spinner
+                    android:id="@+id/spinner_equal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cream"
+                    android:popupBackground="@color/cream"
+                    android:layout_toRightOf="@id/equal_label"
+                    android:layout_below="@id/category_label"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_member"
+                    android:layout_width="312dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/equal_label"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"/>
+
+                <Button
+                    android:id="@+id/ok_add_trip_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/green"
+                    android:fontFamily="@font/boogaloo"
+                    android:text="@string/ok"
+                    android:textColor="@color/cream"
+                    android:layout_below="@id/recycler_view_member"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20dp" />
+
+        </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

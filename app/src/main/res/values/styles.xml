@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/linen</item>
+        <item name="colorPrimaryDark">@color/linen</item>
+        <item name="colorAccent">@color/linen</item>
+    </style>
+
+    <color name="linen">#d5d2c1</color>
+    <color name="twine">#bd8e62</color>
+    <color name="fawn">#a56843</color>
+
+</resources>
