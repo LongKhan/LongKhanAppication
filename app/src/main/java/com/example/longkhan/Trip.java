@@ -462,7 +462,7 @@ public class Trip extends Fragment {
                                                     break;
                                                 }
                                             }
-                                            if(getdate.compareTo(start_date) >= 0 && getdate.toDate().before(end_date.toDate()) ) {
+                                            if(getdate.compareTo(start_date) >= 0) {
                                                 /** currency **/
                                                 String url = "http://data.fixer.io/api/latest?access_key=75eebbc51210e28b820dd55e3ca714b3";
                                                 OkHttpClient client = new OkHttpClient();
